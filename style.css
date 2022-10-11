@@ -1,0 +1,62 @@
+/* Grid Layout */
+
+.container{
+    width: 95vw;
+    height: 95vh;
+
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+
+    display : grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px 1fr 1fr 100px;
+
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.container div{
+    padding: 10px;
+    border: 1px solid #000000;
+}
+.logo{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: lightskyblue;
+}
+.header{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    background-color: pink;
+}
+.content-a{
+    background-color: pink;
+}
+.content-b{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    background-color: lightskyblue;
+}
+.content-c{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 6;
+    background-color: aquamarine;
+}
+
+.content-footer{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: pink;
+}
+
+
