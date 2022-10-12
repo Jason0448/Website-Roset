@@ -1,5 +1,4 @@
 /* Grid Layout */
-
 .container{
     width: 95vw;
     height: 95vh;
@@ -15,20 +14,25 @@
 
     padding-top: 50px;
     padding-left: 50px;
-    padding-right: 50px;
+    padding-right: 40px;
 
-    gap: 10px;
+    gap: 20px;
     box-sizing: border-box;
 }
 
 .container div{
     padding: 10px;
     border: 1px solid #000000;
+    border-radius: 25px;
 }
 .logo{
+    font-family: cursive;
     grid-column-start: 1;
     grid-column-end: 2;
     background-color: lightskyblue;
+    padding-left: 50px;
+    display: grid;
+    justify-content: center;
 }
 .header{
     grid-column-start: 2;
@@ -36,9 +40,13 @@
     background-color: pink;
 }
 .content-a{
+    font-family: cursive;
     background-color: pink;
+    display: grid;
+    justify-content: center;
 }
 .content-b{
+    font-family: cursive;
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 2;
@@ -46,17 +54,64 @@
     background-color: lightskyblue;
 }
 .content-c{
+    font-family: cursive;
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 3;
-    grid-row-end: 6;
     background-color: aquamarine;
+    display: grid;
+    justify-content: left;
+    padding: 10px;
 }
 
 .content-footer{
+    font-family: cursive;
     grid-column-start: 1;
     grid-column-end: 4;
     background-color: pink;
+
 }
 
+/* navbar */
 
+.header .content {
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.header .menu-lijst {
+    display: inline-flex;
+    padding-bottom: 20px;
+}
+
+.menu-lijst{
+    margin-top: 0px;
+    padding-left: 150px;
+}
+
+.menu-lijst li {
+    list-style: none;
+}
+
+.menu-lijst li a {
+    font-family: cursive;
+    color: #000000;
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.menu-lijst li a:hover {
+    color: white;
+}
+
+/* styling */
+
+.button1{
+    background-color: lightskyblue;
+    border-radius: 8px;
+    font-size: 20px;
+    width: 150px;
+}
