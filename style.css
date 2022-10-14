@@ -44,7 +44,7 @@
     font-family: cursive;
     background-color: pink;
     display: grid;
-    justify-content: center;
+    text-align: center;
 }
 .content-b{
     font-family: cursive;
@@ -54,6 +54,7 @@
     grid-row-end: 6;
     background-color: lightskyblue;
 }
+
 .content-c{
     font-family: cursive;
     grid-column-start: 1;
@@ -158,6 +159,7 @@ p{
     width: 33.3333%;
     display: inline-block;
     text-align: center;
+    font-size: 16px;
 }
 
 .content-footer .footer-left {
@@ -167,39 +169,62 @@ p{
 .content-footer .footer-right {
     float: right;
 }
+/* Registreer form css */
+
+/* Style inputs */
+input[type=text], select {
+    width: 30%;
+    padding: 10px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #000000;
+    border-radius: 18px;
+    box-sizing: border-box;
+  }
+
+  input[type=password], select {
+    width: 30%;
+    padding: 10px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #000000;
+    border-radius: 18px;
+    box-sizing: border-box;
+  }
+  
+  input[type=phonenumber], select {
+    width: 20%;
+    padding: 10px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #000000;
+    border-radius: 18px;
+    box-sizing: border-box;
+  }
+
+  /* Style the submit button */
+  input[type=submit] {
+    justify-items: center;
+    width: 25%;
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Add a background color to the submit button on mouse-over */
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
 
 /*Media queries*/ 
 /*Responsiveness*/
 
 @media all and (max-width: 320px){
 
-    /* Grid Layout */
-    .container{
-        width: 100vw;
-        height: 100vh;
-
-        font-family: 'Quicksand', sans-serif;
-        font-weight: bold;
-        font-size: 20px;
-
-        display : grid;
-
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 50px 1fr 1fr 100px;
-
-        padding-top: 50px;
-        padding-left: 50px;
-        padding-right: 40px;
-
-        gap: 18px;
-        box-sizing: border-box;
-    }
-
-    .container div{
-        padding: 10px;
-        border: 1px solid black;
-        border-radius: 25px;
-    }
     .logo{
         font-family: cursive;
         grid-column-start: 1;
@@ -282,8 +307,8 @@ p{
 
     .menu-lijst li a {
         font-family: cursive;
-        color: white;
-        font-size: 11px;
+        color: black;
+        font-size: 16px;
         font-weight: 450;
         text-align: left;
         text-decoration: underline;
