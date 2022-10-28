@@ -20,7 +20,7 @@ $sql = "INSERT INTO users (firstname, lastname, email, password, date_of_birth, 
 VALUES ('$firstname', '$lastname', '$email', '$password', '$date_of_birth', '$phonenumber', '$address', '$zipcode', '$city', 'klant')";
 
 if (mysqli_query($conn, $sql) === TRUE) {
-    header("Location: account.php");
+    header("Location: login.php");
 } else {
     echo "Foutmelding: " . $sql . "<br>" . $conn->error;
 }

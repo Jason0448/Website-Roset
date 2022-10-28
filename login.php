@@ -1,3 +1,8 @@
+<?php 
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,43 +31,27 @@
                 </div>
                 <div class="content-a">
                     <h3>Smaak van de week</h3> 
-                    <img src="../Website-Roset/images/scoops.jpg" class="img-a" >
+                    <img src="../Website-Roset/images/scoops.jpg" class="img-a">
                     <p>De flavorr of the week is ....</p>
                     <button class="button1" type="submit">BESTEL NU!</button>              
                 </div>
                 <div class="content-b">
-                    <h3>Registreren</h3>
-                    <form action="registreren-verwerk.php" method="post">
-                        <label for="fname">Voornaam</label>
-                        <input type="text" id="fname" name="firstname">
-                      
-                        <label for="lname">Achternaam</label>
-                        <input type="text" id="lname" name="lastname"> <br>
-
-                        <label for="email">Email</label>
-                        <input type="text" id="email" name="email">
-
-                        <label for="password">Wachtwoord</label> 
-                        <input type="password" id="password" name="password"> <br>
-
-                        <label for="date">Geboortedatum</label> <br>
-                        <input type="date" id="date" name="date_of_birth"> <br>
-
-                        <label for="phonenumber">Telefoonnummer</label> 
-                        <input type="text" id="phonenumber" name="phonenumber">
-
-                        <label for="address">Adres</label> 
-                        <input type="text" id="address" name="address"> <br>
-
-                        <label for="zipcode">Postcode</label> 
-                        <input type="text" id="zipcode" name="zipcode">
-
-                        <label for="city">Stad</label> 
-                        <input type="text" id="city" name="city">
-                        <br>
+                <form action="login-check.php" method="post">
+                    <h2>Login Scherm</h2>
+                    <div class="loginform">
+                        <label for="email">Email :</label>
+                            <input type="text" id="email" name="email" placeholder="Voer uw Email in">
+                        <label for="password">Wachtwoord :</label> 
+                            <input type="password" id="password" name="password" placeholder="Voer uw Wachtwoord in">
+                            <a href="registreren.html">Nog geen account? Klik hier</a>
+                            <?php
+                            if (!empty($_SESSION["wrong_pas"])) {
+                                if ($_SESSION["wrong_pas"] == true) {
+                                echo "<p style=color:red>Gegevens kloppen niet</p>";
+                                }
+                            } ?>
                         <input type="submit" value="Submit" style="background-color: rgb(6, 153, 221); color:black;">
-                        <a href="login.php">Heb je al een account? Klik hier</a>
-                      </form>         
+                    </div>
                 </div>
                 <div class="content-c">
                     <h4>Populaire Smaken</h4>

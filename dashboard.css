@@ -1,0 +1,136 @@
+/* Grid Layout */
+p{
+    font-weight: 600;
+}
+body{
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    background-attachment: fixed;
+    position: absolute;
+
+}
+
+.container{
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+
+    grid-template-rows: repeat(2, 0..75fr) repeat(6, 1fr);
+
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+
+    width: 100vw;
+    height: 100vw;
+
+}
+
+.container div{
+    padding: 10px;
+}
+
+
+.logo{
+    font-family: cursive;
+    grid-area: 1 / 1 / 2 / 1;
+    background-color: cadetblue;
+    text-align: center;
+}
+.img-logo{
+    height: 150px;
+}
+.header{
+    grid-area: 1 / 2 / 2 / 5;
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container .firstdiv{
+    margin-top: 20px;
+    width: calc(100% - 300px);
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+    text-align: center;
+}
+
+.container .seconddiv{
+   text-decoration: underline;
+   text-align: center;
+}
+
+.container .thirddiv{
+    margin-top: 0;
+    /*width: calc(100% - 400px);*/
+    display: flex;
+    padding-left: 120px;
+    text-align: center;
+} 
+
+
+.loginform{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Content Styling */
+
+.main-content{
+    font-family: cursive;
+    grid-area: 2 / 1 / 8 / 5;
+    background-color: cadetblue;
+}
+
+    .content-a p{
+        text-align: center;
+        text-decoration: underline;
+        font-size: 20px;
+    }
+/* navbar */
+
+.header .content {
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.header .menu-lijst {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0px;
+    padding-top: 75px;
+}
+
+.menu-lijst{
+    margin-top: 0px;
+    text-align: center;
+}
+
+.menu-lijst li {
+    list-style: none;
+    text-align: center;
+}
+
+.menu-lijst li a {
+    font-family: cursive;
+    color: #000000;
+    font-size: 27px;
+    font-weight: 600;
+    margin: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.menu-lijst li a:hover {
+    color: white;
+}
+
+.table thead th{
+    font-size: 25px;
+    padding: 25px;
+}
