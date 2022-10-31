@@ -40,7 +40,9 @@ if ($result = mysqli_query($conn, $sql)) {
                     
                     <table class="table">
                             <thead>
-                                <a href="product-add.php" style="font-size: 20px;">Nieuwe product aanmaken</a>
+                                <p>
+                                <a href="product-add.php" style="font-size: 20px; color:blue;">Nieuw product aanmaken</a>
+                                </p>
                                 <tr>
                                     <th>id</th>
                                     <th>Naam</th>
@@ -56,7 +58,8 @@ if ($result = mysqli_query($conn, $sql)) {
                                         <td><?php echo $product["price_per_kg"] ?></td>
                                         <td><?php echo $product["category"] ?></td>
                                         
-                                        <td><a style="color: red;"  href="product-delete.php?id=<?php echo $product["id"] ?>" class="btn btn-danger">Delete</a></td>
+                                        <td><a style="color: red;"  href="product-delete.php?id=<?php echo $product["id"] ?>" class="btn btn-danger">Verwijder</a></td>
+                                        <td><a style="color: yellow;"  href="product-edit.php?id=<?php echo $product["id"] ?>" class="btn btn-danger">Bewerk Product</a></td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>

@@ -17,7 +17,7 @@ session_start();
             <div class="container">
                 <div class="logo">
                     <h2>De Roset</h2>
-                    <img src="../Website-Roset/images/Logo.png" alt="" class="img-logo">
+                    <img src="../Website-Roset/images/Logo.png" alt="Logo" class="img-logo">
                 </div>
                 <div class="header">
                     <ul class="menu-lijst">
@@ -31,9 +31,9 @@ session_start();
                 </div>
                 <div class="content-a">
                     <h3>Smaak van de week</h3> 
-                    <img src="../Website-Roset/images/scoops.jpg" class="img-a">
-                    <p>De flavorr of the week is ....</p>
-                    <button class="button1" type="submit">BESTEL NU!</button>              
+                    <img src="../Website-Roset/images/smaken/yoghurt.png" alt="Smaak van de week" class="img-a">
+                    <p>De smaak van de week is Griekse Yoghurt</p>
+                    <button class="bestel-button" type="submit">Bestel Nu!!!</button>               
                 </div>
                 <div class="content-b">
                 <form action="login-check.php" method="post">
@@ -54,9 +54,11 @@ session_start();
                     </div>
                 </div>
                 <div class="content-c">
-                    <h4>Populaire Smaken</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, eaque enim? Minima ipsum laudantium cumque ex! Fugit eveniet accusantium, ex obcaecati ducimus delectus! Mollitia vero natus, impedit vel reprehenderit voluptatibus.</p> <br>
-
+                    <h3>Populaire Smaken</h3>
+                    <p>Aardbei</p>
+                    <img src="../Website-Roset/images/smaken/aardbei.png" class="img-c">
+                    <p>Mango</p>
+                    <img src="../Website-Roset/images/smaken/mango.png" class="img-c">
                 </div>
                 <div class="content-footer">
                     <aside class="footer-left">

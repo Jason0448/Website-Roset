@@ -26,6 +26,27 @@
                 <div class="main-content">
                     <h1 style="text-align: center;">Dashboard</h1>
                         
+                    <img src="../Website-Roset/images/spice.jfif">
+                    <img src="../Website-Roset/images/smaken/kokos.png">
+                    <img src="../Website-Roset/images/smaken/kokos.png">
+                    <img src="../Website-Roset/images/smaken/kokos.png">
+                    <img src="../Website-Roset/images/smaken/kokos.png">
+                    <img src="../Website-Roset/images/smaken/kokos.png">
+                    <img src="../Website-Roset/images/spice.jfif">
+                    <img src="../Website-Roset/images/spice.jfif">
+                    <img src="../Website-Roset/images/smaken/mango.png">
+                    <img src="../Website-Roset/images/smaken/mango.png">
+                    <img src="../Website-Roset/images/smaken/mango.png">
+                    <img src="../Website-Roset/images/smaken/mango.png">
+                    <img src="../Website-Roset/images/smaken/mango.png">
+                    <img src="../Website-Roset/images/spice.jfif">
+                    <img src="../Website-Roset/images/spice.jfif">
+                    <img src="../Website-Roset/images/smaken/kokos.png">
+                    <img src="../Website-Roset/images/smaken/kokos.png">
+                    <img src="../Website-Roset/images/smaken/kokos.png">
+                    <img src="../Website-Roset/images/smaken/kokos.png">
+                    <img src="../Website-Roset/images/smaken/kokos.png">
+                    <img src="../Website-Roset/images/spice.jfif">
                         
                 </div>         
     </body>

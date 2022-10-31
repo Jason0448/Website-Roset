@@ -15,7 +15,7 @@
             <div class="container">
                 <div class="logo">
                     <h2>De Roset</h2>
-                    <img src="../Website-Roset/images/Logo.png" alt="" class="img-logo">
+                    <img src="../Website-Roset/images/Logo.png" alt="Logo" class="img-logo">
                 </div>
                  <div class="header">
                     <ul class="menu-lijst">
@@ -28,9 +28,9 @@
                 </div> 
                 <div class="content-a">
                     <h3>Smaak van de week</h3> 
-                        <img src="../Website-Roset/images/smaken/yoghurt.png" class="img-a">
+                        <img src="../Website-Roset/images/smaken/yoghurt.png" alt="Smaak van de week" class="img-a">
                     <p>De Smaak van de week is Griekse yoghurt</p>
-                    <button class="button1" type="submit">BESTEL NU!</button>              
+                    <button class="bestel-button" type="submit">Bestel Nu!!!</button>                 
                 </div>
                 <div class="content-b">
                     <h1>Uw gegevens</h1>
@@ -61,25 +61,30 @@
                                 echo "<br>";
                                 echo "</h4>";
                     ?>
-                    <a href="account-update.php?id=<?php echo $_SESSION['userData']['id']?>" style="color: green;">Gegevens Updaten</a>
+                    <p style="text-align: left;">
+                    <a href="account-edit.php?id=<?php echo $_SESSION['userData']['id']?>" style="color: green;">Gegevens Updaten</a>
                     <a href="account-delete.php?id=<?php echo $_SESSION['userData']['id']?>" style="color: red;">Account Verwijderen</a>
                     <td><a href="logout.php"style="color: orange;">Uitloggen</a></td>
-
+                    </p>
+                    
                     <?php
                     if ($_SESSION['userData']['role'] == 'medewerker' || $_SESSION['userData']['role'] == 'manager' ){
+                        echo '<p style="text-align:left;">';
                         echo "<a href=dashboard.php>Dashboard voor medewerkers</a>";
+                        echo '</p>';
                     }
                     ?>
-                    
-
+                
                         <?php } else {
+                        echo '<p>';
                         echo "Je bent nog niet ingelogd, log in om uw informatie te zien."; 
-                        echo ' <a href="login.php" target="_blank">Klik om in te loggen</a>'; 
+                        echo ' <a href="login.php">Klik om in te loggen</a>'; 
                         echo ' of <a href="registreren.html" target="_blank">hier (Registreren)</a> om een account aan te maken';
+                        echo '</p>';
                     }  ?> 
                 </div>
                 <div class="content-c">
-                    <h4>Populaire Smaken</h4>
+                    <h3>Populaire Smaken</h3>
                     <p>Aardbei</p>
                     <img src="../Website-Roset/images/smaken/aardbei.png" class="img-c">
                     <p>Mango</p>
@@ -87,15 +92,14 @@
                 </div>
                 <div class="content-footer">
                     <aside class="footer-left">
-                        <h3>
-                        Ons Adres: <br>
-                        <br>
-                        <br>
-                        Castricum
-                        </h3>
+                        <h3>Ons Adres:</h3>
+                        <p>Castricum</p>
                     </aside>         
                     <aside class="footer-center">
                         <h3>Wij bezorgen in...</h3>
+                        <p>Heiloo</p>
+                        <p>Limmen</p>
+                        <p>Akersloot</p>
                     </aside>
                     <aside class="footer-right">
                         <h3 style="text-decoration: underline; color:blue;">Onze voorwaarden</h3>

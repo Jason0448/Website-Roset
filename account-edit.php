@@ -34,27 +34,27 @@ if ($result = mysqli_query($conn, $sql)) {
 <body>
     <div class="container">
         <div class="logo">
-            De Roset
+                <h2>De Roset</h2>
+                <img src="../Website-Roset/images/Logo.png" alt="Logo" class="img-logo">
         </div>
         <div class="header">
             <ul class="menu-lijst">
                 <li><a href="index.html">Over ons</a></li>
-                <li><a href="#">Bestellen</a></li>
+                <li><a href="bestellen.php">Bestellen</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="#">Winkelmand</a></li>
                 <li><a href="account.php">Account</a></li>
             </ul>
         </div>
         <div class="content-a">
-            <h3>Smaak van de week</h3>
-            <img src="../Website-Roset/images/scoops.jpg" class="img-a">
-            <p>De flavorr of the week is ....</p>
-            <button class="button1" type="submit">BESTEL NU!</button>
+                <h3>Smaak van de week</h3> 
+                <img src="../Website-Roset/images/smaken/yoghurt.png" class="img-a">
+                <p>De smaak van de week is Griekse Yoghurt</p>
+                <button class="bestel-button" type="submit">Bestel Nu!!!</button>    
         </div>
         <div class="content-b">
             <h2>Je gegevens bewerken</h2>
-            <form action="account-update-process.php" method="post">
+            <form action="account-edit-process.php" method="post">
                 <input type="hidden" name="id" value="<?php echo $user["id"] ?>">
                 <div class="form-group">
                     <label for="exampleInputfirstname">Voornaam</label>
@@ -92,9 +92,11 @@ if ($result = mysqli_query($conn, $sql)) {
             </form>
         </div>
         <div class="content-c">
-            <h4>Populaire Smaken</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, eaque enim? Minima ipsum laudantium cumque ex! Fugit eveniet accusantium, ex obcaecati ducimus delectus! Mollitia vero natus, impedit vel reprehenderit voluptatibus.</p> <br>
-
+                <h3>Populaire Smaken</h3>
+                <p>Aardbei</p>
+                <img src="../Website-Roset/images/smaken/aardbei.png" class="img-c">
+                <p>Mango</p>
+                <img src="../Website-Roset/images/smaken/mango.png" class="img-c">
         </div>
         <div class="content-footer">
             <aside class="footer-left">
@@ -107,6 +109,9 @@ if ($result = mysqli_query($conn, $sql)) {
             </aside>
             <aside class="footer-center">
                 <h3>Wij bezorgen in...</h3>
+                    <p>Heiloo</p>
+                    <p>Limmen</p>
+                    <p>Akersloot</p>
             </aside>
             <aside class="footer-right">
                 <h3 style="text-decoration: underline; color:blue;">Onze voorwaarden</h3>

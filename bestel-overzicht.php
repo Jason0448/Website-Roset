@@ -24,7 +24,7 @@ if ($result = mysqli_query($conn, $sql)) {
             <div class="container">
                 <div class="logo">
                     <h2>De Roset</h2>
-                    <img src="../Website-Roset/images/Logo.png" alt="" class="img-logo">
+                    <img src="../Website-Roset/images/Logo.png" alt="Logo" class="img-logo">
                 </div>
                  <div class="header">
                     <ul class="menu-lijst">

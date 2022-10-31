@@ -1,6 +1,7 @@
 /* Grid Layout */
 p{
     font-weight: 600;
+    padding: 0px;
 }
 body{
     background-image: url(../Website-Roset/images/bg.jpg);
@@ -93,10 +94,7 @@ body{
     display: grid;
     justify-items: center;
     text-align: center;
-
     grid-area: 2 / 1 / 4 / 2;
-
-
 }
 .content-b{
     font-family: cursive;
