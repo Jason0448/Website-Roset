@@ -1,8 +1,3 @@
-<?php 
-session_start();
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,61 +8,55 @@ session_start();
     <link rel="stylesheet" href="media.css">
     <title>Home</title>
 </head>
-    <body style="background-color: beige;">
+    <body>
             <div class="container">
                 <div class="logo">
                     <h2>De Roset</h2>
                     <img src="../Website-Roset/images/Logo.png" alt="Logo" class="img-logo">
                 </div>
-                <div class="header">
+                 <div class="header">
                     <ul class="menu-lijst">
                         <li><a href="index.html">Over ons</a></li>
                         <li><a href="bestellen.php">Bestellen</a></li>
                         <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Winkelmandje</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                         <li><a href="account.php">Account</a></li>
                       </ul>
-                </div>
+                </div> 
                 <div class="content-a">
                     <h3>Smaak van de week</h3> 
                     <img src="../Website-Roset/images/smaken/yoghurt.png" alt="Smaak van de week" class="img-a">
                     <p>De smaak van de week is Griekse Yoghurt</p>
-                    <button class="bestel-button" type="submit">Bestel Nu!!!</button>               
+                    <button class="bestel-button" type="submit">Bestel Nu!!!</button>           
                 </div>
                 <div class="content-b">
-                <form action="login-check.php" method="post">
-                    <h2>Login Scherm</h2>
-                    <div class="loginform">
-                        <label for="email">Email :</label>
-                            <input type="text" id="email" name="email" placeholder="Voer uw Email in">
-                        <label for="password">Wachtwoord :</label> 
-                            <input type="password" id="password" name="password" placeholder="Voer uw Wachtwoord in">
-                            <a href="registreren.html">Nog geen account? Klik hier</a>
-                            <?php
-                            if (!empty($_SESSION["wrong_pas"])) {
-                                if ($_SESSION["wrong_pas"] == true) {
-                                echo "<p style=color:red>Gegevens kloppen niet</p>";
-                                }
-                            } ?>
-                        <input type="submit" value="Submit" style="background-color: rgb(6, 153, 221); color:black;">
-                    </div>
+                    <h1>Contact</h1>
+                    <div class="wrapper">
+                        <div class="firstdiv">
+                            <p>
+                                Altijd op zoek naar nieuw talent<br>
+                                Dynamisch ondernemen betekent dynamisch in de arbeidsmarkt staan. De Roset is daarom regelmatig op zoek naar nieuw talent. Naar vakmensen met liefde voor patisserie, chocolaterie en ambachtelijk ijs naar commerciële mensen die van een uitdaging houden of naar servicegerichte mensen met oog voor de klant.
+                            </p> 
+                            <img src="../Website-Roset/images/ijs.jpg" alt="Ijs foto" class="img-b1">
+                        </div>
+                        <div class="seconddiv">
+                            <img src="../Website-Roset/images/contact.png" alt="Contact Image" class="img-contact">
+                        </div>   
+                    </div>         
                 </div>
                 <div class="content-c">
                     <h3>Populaire Smaken</h3>
                     <p>Aardbei</p>
-                    <img src="../Website-Roset/images/smaken/aardbei.png" class="img-c">
+                    <img src="../Website-Roset/images/smaken/aardbei.png" alt="Populaire smaken 1" class="img-c">
                     <p>Mango</p>
-                    <img src="../Website-Roset/images/smaken/mango.png" class="img-c">
+                    <img src="../Website-Roset/images/smaken/mango.png" alt="Populaire smaken 2" class="img-c">
                 </div>
                 <div class="content-footer">
                     <aside class="footer-left">
-                        <h3>
-                        Ons Adres: <br>
-                        <br>
-                        <br>
-                        Castricum
-                        </h3>
+                        <h3>Ons Adres:</h3>
+                        <p>Castricum</p>
+                        <p>Burgemeester Mooijstraat 17</p>
+                        <p>1901 EP Castricum</p>
                     </aside>         
                     <aside class="footer-center">
                         <h3>Wij bezorgen in...</h3>
@@ -77,6 +66,9 @@ session_start();
                     </aside>
                     <aside class="footer-right">
                         <h3 style="text-decoration: underline; color:blue;">Onze voorwaarden</h3>
+                        <p>Bestel minimaal 2 smaken</p>
+                        <p>Deel met je matties</p>
+                        <p>Wees niet gierig</p>
                     </aside>
                 </div>
             </div>

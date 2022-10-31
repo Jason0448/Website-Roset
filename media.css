@@ -42,12 +42,10 @@
         text-align: center;
     }
     .content-b .besteldiv{
-        display: grid;
-        flex-wrap: wrap;
-        flex-direction: column;
-        
+        padding-left: 0px;
     }
     .content-b .firstdiv{
+        display: flex;
         margin-left: 0px;
         margin-right: 20px;
         font-size: 5px;
@@ -67,9 +65,12 @@
         height: 125px;
     }
     .img-ice{
-        height: 100px;
+        height: 50px;
     }
     .img-c{
+        height: 125px;
+    }
+    .img-contact{
         height: 125px;
     }
     .container .thirddiv {
@@ -129,7 +130,7 @@
         height: 55px;
     }
     .img-ice{
-        height: 55px;
+        height: 45px;
     }
     .header .menu-lijst{
         padding: 50px 10px 10px 10px;
@@ -147,8 +148,6 @@
         font-size: 10px;
     }
     .bestel-button{
-        height: 35px;
-        width: 50px;
     }
     .content-b{
         grid-area: 2 / 2 / 8 / 5;
@@ -189,6 +188,9 @@
         height: 100px;
         padding-left: 20px;
         align-items: center;
+    }
+    .img-contact{
+        height: 100px;
     }
     .content-footer{
         grid-area: 8 / 2 / 9 / 5;

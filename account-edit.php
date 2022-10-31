@@ -109,9 +109,9 @@ if ($result = mysqli_query($conn, $sql)) {
             </aside>
             <aside class="footer-center">
                 <h3>Wij bezorgen in...</h3>
-                    <p>Heiloo</p>
-                    <p>Limmen</p>
-                    <p>Akersloot</p>
+                    <p>Heiloo $12</p>
+                    <p>Limmen $12</p>
+                    <p>Akersloot $15</p>
             </aside>
             <aside class="footer-right">
                 <h3 style="text-decoration: underline; color:blue;">Onze voorwaarden</h3>

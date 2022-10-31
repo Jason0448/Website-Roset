@@ -18,7 +18,7 @@
                 </div>
                  <div class="header">
                     <ul class="menu-lijst">
-                        <li><a href="#">Over ons</a></li>
+                        <li><a href="index.html">Over ons</a></li>
                         <li><a href="bestellen.php">Bestellen</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact</a></li>
@@ -32,25 +32,33 @@
                     <p>De smaak van de week is Griekse Yoghurt</p>
                     <button class="bestel-button" type="submit">Bestel Nu!!!</button>           
                 </div>
-                <div class="content-b">
-                    <h1>Over ons</h1>
-                    <div class="wrapper">
-                        <div class="firstdiv">
-                            <p>
-                                Patisserie en chocolaterie de Roset is gevestigd in Castricum, Heerhugowaard en Alkmaar. Ons bedrijf werkt uitsluitend met de allerbeste grondstoffen en dat proef je! 
-                                Voor ons banketbakkersijs wordt dagelijks verse melk bij de boer gehaald, dit vormt de basis van het heerlijke, ambachtelijk gemaakt ijs.
-                            </p> 
-                            <img src="../Website-Roset/images//spice.jfif" alt="Ice spice" class="img-b1">
-                        </div>
-                        <div class="seconddiv">
-                            <p>Ons filiaal in de Burgmeester Mooijstraat beschikt overigens over een Tearoom met 65 zitplaatsen waar U heerlijk kunt genieten van al onze heerlijkheden. Tevens kunt U hier ook terecht voor onze heerlijke lunchgerechten. 
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        </div>   
-                    </div>
-                    <div class="thirddiv">
-                        <img src="../Website-Roset/images/Icekid.jpg" alt="Kind eet ijs" class="img-b2"><p>Ijzige ijsjes. Wil je een bak ijs. bestel dan nuuuuu. Smaak van de week = Griekse Yogurt wwww</p>
-                    </div>           
+                <div class="content-b" style="display: block;">
+                <form action="order-process.php" method="post">
+                    <h1>Jouw Winkelmand</h1>
+                    <p style="font-size: 20px;">
+                     Kies of je het ijs wil laten bezorgen of zelf af wilt halen.  
+                     <input type="radio" id="bezorgen" name="fav_language" value="bezorgen">
+                     <label for="bezorgen">Bezorgen</label>
+                     <input type="radio" id="afhalen" name="fav_language" value="afhalen">
+                     <label for="afhalen">Afhalen</label><br>
+                    </p>
+
+                    <label style="font-weight: 600;" for="fname">Voornaam :</label>
+                    <input type="text" id="fname" name="firstname"> <br>
+                    <label style="font-weight: 600;" for="address">Adres :</label>
+                    <input type="text" id="address" name="address"><br>
+                    <label style="font-weight: 600;" for="zipcode">Postcode :</label>
+                    <input type="text" id="zipcode" name="city"> <br>
+                    <label style="font-weight: 600;" for="zipcode">Plaats :</label>
+                    <select name="city" id="city">
+                        <option value="Heiloo">Heiloo</option>
+                        <option value="Limmen">Limmen</option>
+                        <option value="Akersloot">Akersloot</option>
+                    </select>
+                </form>
                 </div>
+
+
                 <div class="content-c">
                     <h3>Populaire Smaken</h3>
                     <p>Aardbei</p>

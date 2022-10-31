@@ -79,7 +79,7 @@
                         echo '<p>';
                         echo "Je bent nog niet ingelogd, log in om uw informatie te zien."; 
                         echo ' <a href="login.php">Klik om in te loggen</a>'; 
-                        echo ' of <a href="registreren.html" target="_blank">hier (Registreren)</a> om een account aan te maken';
+                        echo ' of <a href="registreren.html">hier (Registreren)</a> om een account aan te maken';
                         echo '</p>';
                     }  ?> 
                 </div>
@@ -97,9 +97,9 @@
                     </aside>         
                     <aside class="footer-center">
                         <h3>Wij bezorgen in...</h3>
-                        <p>Heiloo</p>
-                        <p>Limmen</p>
-                        <p>Akersloot</p>
+                        <p>Heiloo $12</p>
+                        <p>Limmen $12</p>
+                        <p>Akersloot $15</p>
                     </aside>
                     <aside class="footer-right">
                         <h3 style="text-decoration: underline; color:blue;">Onze voorwaarden</h3>
