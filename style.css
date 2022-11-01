@@ -323,29 +323,3 @@ input[type=text], select {
     cursor: pointer;
   }
 
-  /* js shit proberen */
-
-  .ice{
-    position: relative;
-    overflow: hidden;
-  }
-
-  .add-cart{
-    position: absolute;
-    width: 100%;
-    background-color: pink;
-    transition: all 0.3s ease-in-out;
-    opacity: 0;
-    cursor: pointer;
-    text-align: center;
-  }
-
-  .ice:hover .cart1,
-  .ice:hover .cart2,
-  .ice:hover .cart3,
-  .ice:hover .cart4{
-    bottom: 50px;
-    opacity: 10;
-    padding: 40px;
-    text-decoration: none;
-  }

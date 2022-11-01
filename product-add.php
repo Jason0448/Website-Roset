@@ -20,8 +20,9 @@
                         <li><a href="dashboard.php">Home</a></li>
                         <li><a href="user-overview.php">Gebruikers</a></li>
                         <li><a href="product-overview.php">Producten</a></li>
-                        <li><a href="bestel-overzicht.php">Bestellingen</a></li>
+                        <li><a href="order-overview.php">Bestellingen</a></li>
                         <li><a href="account.php">Account</a></li>
+                        <li><a href="index.html">Terug naar Normaal</a></li>
                       </ul>
                 </div> 
                 <div class="main-content">

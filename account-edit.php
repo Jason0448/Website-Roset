@@ -47,10 +47,9 @@ if ($result = mysqli_query($conn, $sql)) {
             </ul>
         </div>
         <div class="content-a">
-                <h3>Smaak van de week</h3> 
-                <img src="../Website-Roset/images/smaken/yoghurt.png" class="img-a">
-                <p>De smaak van de week is Griekse Yoghurt</p>
-                <button class="bestel-button" type="submit">Bestel Nu!!!</button>    
+        <img id="bestel-image" src="../Website-Roset/images/smaken/yoghurt.png" alt="Smaak van de week" class="img-a">
+                    <p>De smaak van de week is Griekse Yoghurt</p>
+                    <button id="foto-bestel" onclick="zetIn('griekseYoghurt')" class="bestel-button" type="submit">Bestel Nu!!!</button>      
         </div>
         <div class="content-b">
             <h2>Je gegevens bewerken</h2>

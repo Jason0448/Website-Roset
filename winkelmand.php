@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
-    <script src="../Website-Roset/javascript/main.js"></script>
+    <script src="../Website-Roset/javascript/main.js" async></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <title>Home</title>
 </head>
@@ -19,7 +19,7 @@
                  <div class="header">
                     <ul class="menu-lijst">
                         <li><a href="index.html">Over ons</a></li>
-                        <li><a href="bestellen.php">Bestellen</a></li>
+                        <li><a href="order.php">Bestellen</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact</a></li>
                         <li><a href="account.php">Account</a></li>
@@ -28,12 +28,15 @@
                 </div> 
                 <div class="content-a">
                     <h3>Smaak van de week</h3> 
-                    <img src="../Website-Roset/images/smaken/yoghurt.png" alt="Smaak van de week" class="img-a">
+                    <img id="bestel-image" src="../Website-Roset/images/smaken/yoghurt.png" alt="Smaak van de week" class="img-a">
                     <p>De smaak van de week is Griekse Yoghurt</p>
-                    <button class="bestel-button" type="submit">Bestel Nu!!!</button>           
+                    <button id="foto-bestel" onclick="zetIn('griekseYoghurt')" class="bestel-button" type="submit">Bestel Nu!!!</button>           
                 </div>
                 <div class="content-b" style="display: block;">
+                <button id="buttondelete">Verwijder alles</button>
+                <p id="items"></p>
                 <form action="order-process.php" method="post">
+                <input type="hidden" id="iceId" name="productid" value="">
                     <h1>Jouw Winkelmand</h1>
                     <p style="font-size: 20px;">
                      Kies of je het ijs wil laten bezorgen of zelf af wilt halen.  
@@ -55,7 +58,9 @@
                         <option value="Limmen">Limmen</option>
                         <option value="Akersloot">Akersloot</option>
                     </select>
-                </form>
+                    
+                </form>         
+               
                 </div>
 
 

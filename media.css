@@ -177,7 +177,12 @@
         padding-left: 0px;
         padding: 10px;
     }
-
+    .content-b h1{
+        font-size: 20px;
+    }
+    .content-b p{
+        font-size: 14px !important;
+    }
     .img-b1, .img-b2{
         display: none;
     }
@@ -185,7 +190,7 @@
         grid-area: 5 / 1 / 9 / 2;
     }
     .img-c{
-        height: 100px;
+        height: 75px;
         padding-left: 20px;
         align-items: center;
     }

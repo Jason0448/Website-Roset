@@ -37,7 +37,29 @@ if ($result = mysqli_query($conn, $sql)) {
                 </div> 
                 <div class="main-content">
                     <h1 style="text-align: center;">Bestellingen</h1>
-                      
+                    <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>User id</th>
+                                    <th>Product id</th>
+                                    <th>Pickup</th>
+                                    <th>Due Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($orders as $order) : ?>
+                                    <tr>
+                                        <td><?php echo $order["id"] ?></td>
+                                        <td><?php echo $order["user_id"] ?></td>
+                                        <td><?php echo $order["product_id"] ?></td>
+                                        <td><?php echo $order["pickup"] ?></td>
+                                        <td><?php echo $order["due_datetime"] ?></td>
+                                        <td><a style="color: red;" href="order-delete.php?id=<?php echo $order["id"] ?>" class="btn btn-danger">Delete</a></td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>  
                 </div>         
     </body>
 </html>
