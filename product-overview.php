@@ -8,6 +8,13 @@ if ($result = mysqli_query($conn, $sql)) {
     $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
 }
 
+session_start();
+
+if($_SESSION['userData'] == 0 || $_SESSION['userData']['role'] == "klant"){
+
+    header("Location : index.html");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +39,6 @@ if ($result = mysqli_query($conn, $sql)) {
                         <li><a href="user-overview.php">Gebruikers</a></li>
                         <li><a href="product-overview.php">Producten</a></li>
                         <li><a href="order-overview.php">Bestellingen</a></li>
-                        <li><a href="account.php">Account</a></li>
                         <li><a href="index.html">Terug naar Normaal</a></li>
                       </ul>
                 </div> 
@@ -60,7 +66,7 @@ if ($result = mysqli_query($conn, $sql)) {
                                         <td><?php echo $product["category"] ?></td>
                                         
                                         <td><a style="color: red;"  href="product-delete.php?id=<?php echo $product["id"] ?>" class="btn btn-danger">Verwijder</a></td>
-                                        <td><a style="color: yellow;"  href="product-edit.php?id=<?php echo $product["id"] ?>" class="btn btn-danger">Bewerk Product</a></td>
+                                        <td><a style="color: cyan;"  href="product-edit.php?id=<?php echo $product["id"] ?>" class="btn btn-danger">Bewerk Product</a></td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>

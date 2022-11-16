@@ -1,3 +1,14 @@
+<?php
+require 'db.php';
+
+session_start();
+
+if($_SESSION['userData'] == 0 || $_SESSION['userData']['role'] == "klant"){
+
+    header("Location : index.html");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

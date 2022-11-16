@@ -2,7 +2,17 @@
 
 require 'db.php';
 
-$sql = "SELECT * FROM orders ";
+session_start();
+
+if($_SESSION['userData'] == 0 || $_SESSION['userData']['role'] == "klant"){
+
+    header("Location : index.html");
+}
+
+
+$sql = "SELECT *, users.firstname, products.name FROM users 
+JOIN orders on orders.user_id = users.id
+JOIN products on products.id = orders.product_id; ";
 
 if ($result = mysqli_query($conn, $sql)) {
     $orders = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -31,8 +41,8 @@ if ($result = mysqli_query($conn, $sql)) {
                         <li><a href="dashboard.php">Home</a></li>
                         <li><a href="user-overview.php">Gebruikers</a></li>
                         <li><a href="product-overview.php">Producten</a></li>
-                        <li><a href="bestel-overzicht.php">Bestellingen</a></li>
-                        <li><a href="account.php">Account</a></li>
+                        <li><a href="order-overview.php">Bestellingen</a></li>
+                        <li><a href="index.html">Terug naar Normaal</a></li>
                       </ul>
                 </div> 
                 <div class="main-content">
@@ -40,22 +50,22 @@ if ($result = mysqli_query($conn, $sql)) {
                     <table class="table">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>User id</th>
-                                    <th>Product id</th>
-                                    <th>Pickup</th>
-                                    <th>Due Time</th>
+                                    <th>OrderID</th>
+                                    <th>Name</th>
+                                    <th>ProductNaam</th>
+                                    <th>PickupTijd</th>
+                                    <th>Status</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach ($orders as $order) : ?>
                                     <tr>
                                         <td><?php echo $order["id"] ?></td>
-                                        <td><?php echo $order["user_id"] ?></td>
-                                        <td><?php echo $order["product_id"] ?></td>
+                                        <td><?php echo $order["firstname"] ?></td>
+                                        <td><?php echo $order["name"] ?></td>
                                         <td><?php echo $order["pickup"] ?></td>
-                                        <td><?php echo $order["due_datetime"] ?></td>
-                                        <td><a style="color: red;" href="order-delete.php?id=<?php echo $order["id"] ?>" class="btn btn-danger">Delete</a></td>
+                                        <td><?php echo $order["status"] ?></td>
+                                        <td><a style="color: red;" href="order-delete.php?id=<?php echo $order["id"] ?>" class="btn btn-danger">Annuleer/Verwijder</a></td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>

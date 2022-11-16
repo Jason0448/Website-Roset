@@ -1,3 +1,15 @@
+<?php
+require 'db.php';
+
+session_start();
+
+if($_SESSION['userData'] == 0 || $_SESSION['userData']['role'] == "klant"){
+
+    header("Location : index.html");
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,35 +32,12 @@
                         <li><a href="user-overview.php">Gebruikers</a></li>
                         <li><a href="product-overview.php">Producten</a></li>
                         <li><a href="order-overview.php">Bestellingen</a></li>
-                        <li><a href="account.php">Account</a></li>
                         <li><a href="index.html">Terug naar Normaal</a></li>
                     </ul>
                 </div> 
                 <div class="main-content">
                     <h1 style="text-align: center;">Dashboard</h1>
-                        
-                    <img src="../Website-Roset/images/spice.jfif">
-                    <img src="../Website-Roset/images/smaken/kokos.png">
-                    <img src="../Website-Roset/images/smaken/kokos.png">
-                    <img src="../Website-Roset/images/smaken/kokos.png">
-                    <img src="../Website-Roset/images/smaken/kokos.png">
-                    <img src="../Website-Roset/images/smaken/kokos.png">
-                    <img src="../Website-Roset/images/spice.jfif">
-                    <img src="../Website-Roset/images/spice.jfif">
-                    <img src="../Website-Roset/images/smaken/mango.png">
-                    <img src="../Website-Roset/images/smaken/mango.png">
-                    <img src="../Website-Roset/images/smaken/mango.png">
-                    <img src="../Website-Roset/images/smaken/mango.png">
-                    <img src="../Website-Roset/images/smaken/mango.png">
-                    <img src="../Website-Roset/images/spice.jfif">
-                    <img src="../Website-Roset/images/spice.jfif">
-                    <img src="../Website-Roset/images/smaken/kokos.png">
-                    <img src="../Website-Roset/images/smaken/kokos.png">
-                    <img src="../Website-Roset/images/smaken/kokos.png">
-                    <img src="../Website-Roset/images/smaken/kokos.png">
-                    <img src="../Website-Roset/images/smaken/kokos.png">
-                    <img src="../Website-Roset/images/spice.jfif">
-                        
+                    <p style="text-align: center; font-size:30px;">Dit is het dashboard voor de medewerkers en de manager. Klanten hebben geen toegang tot het dashboard.</p>
                 </div>         
     </body>
 </html>

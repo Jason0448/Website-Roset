@@ -41,69 +41,69 @@ if ($result = mysqli_query($conn, $sql)) {
                     <h3>Smaak van de week</h3> 
                     <img id="bestel-image" src="../Website-Roset/images/smaken/yoghurt.png" alt="Smaak van de week" class="img-a">
                     <p>De smaak van de week is Griekse Yoghurt</p>
-                    <button id="foto-bestel" onclick="zetIn('griekseYoghurt')" class="bestel-button" type="submit">Bestel Nu!!!</button>                  
+                    <button id="foto-bestel" class="bestel-button" type="submit">Bestel Nu!!!</button>                  
                 </div>
                 <div class="content-b" style="grid-area: 2 / 2 / 8 / 5;">
                     <h2>Bestel hieronder je ijs in bakken van 1KG</h2>
                     <div class="besteldiv">
                         <div class="rij1"> 
-                            <button id="foto-bestel" onclick="zetIn('vanille', '10', '1')" class="bestel-button" class="add-cart" type="submit" name="vanille"><p>Vanille</p> 
+                            <button id="foto-bestel" class="bestel-button" class="add-cart" type="submit" name="vanille"><p>Vanille</p> 
                                 <img id="bestel-image" src="../Website-Roset/images/smaken/vanille.png" class="img-ice">
                             </button>               
-                            <button id="foto-bestel" onclick="zetIn('aardbei')" class="bestel-button" type="submit" name="aardbei"><p>Aardbei</p> 
+                            <button id="foto-bestel" class="bestel-button" type="submit" name="aardbei"><p>Aardbei</p> 
                                 <img id="bestel-image" src="../Website-Roset/images/smaken/aardbei.png" class="img-ice">
                             </button>
-                            <button id="foto-bestel" onclick="zetIn('straciatella')" class="bestel-button" type="submit" name="straciatella"><p>Straciatella</p> 
+                            <button id="foto-bestel" class="bestel-button" type="submit" name="straciatella"><p>Straciatella</p> 
                                 <img src="../Website-Roset/images/smaken/straciatella.png" class="img-ice">
                             </button>
-                            <button id="foto-bestel" onclick="zetIn('caramel')" class="bestel-button" type="submit" name="caramel"><p>Caramel</p> 
+                            <button id="foto-bestel" class="bestel-button" type="submit" name="caramel"><p>Caramel</p> 
                                 <img id="bestel-image" src="../Website-Roset/images/smaken/caramel.png" class="img-ice">
                             </button>
-                            <button id="foto-bestel" onclick="zetIn('kokos')" class="bestel-button" type="submit" name="kokos"><p>Kokos</p> 
+                            <button id="foto-bestel" class="bestel-button" type="submit" name="kokos"><p>Kokos</p> 
                                 <img id="bestel-image" src="../Website-Roset/images/smaken/kokos.png" class="img-ice">
                             </button>
-                            <button id="foto-bestel" onclick="zetIn('koekjes')" class="bestel-button" type="submit" name="koekjes"><p>Koekjes</p> 
+                            <button id="foto-bestel"  class="bestel-button" type="submit" name="koekjes"><p>Koekjes</p> 
                                 <img id="bestel-image" src="../Website-Roset/images/smaken/koekjes.png" class="img-ice">
                             </button>
                         </div>
                         <div class="rij2">
-                            <button id="foto-bestel" onclick="zetIn('banaan')" class="bestel-button" type="submit" name="banaan"><p>Banaan</p> 
+                            <button id="foto-bestel" class="bestel-button" type="submit" name="banaan"><p>Banaan</p> 
                                 <img id="bestel-image" src="../Website-Roset/images/smaken/banaan.png" class="img-ice">
                             </button>
-                            <button id="foto-bestel" onclick="zetIn('nutella')" class="bestel-button" type="submit" name="nutella"><p>Nutella</p> 
+                            <button id="foto-bestel" class="bestel-button" type="submit" name="nutella"><p>Nutella</p> 
                                 <img id="bestel-image" src="../Website-Roset/images/smaken/nutella.png" class="img-ice">
                             </button>
-                            <button id="foto-bestel" onclick="zetIn('chocolade')" class="bestel-button" type="submit" name="chocolade"><p>Chocolade</p> 
+                            <button id="foto-bestel" class="bestel-button" type="submit" name="chocolade"><p>Chocolade</p> 
                                 <img id="bestel-image" src="../Website-Roset/images/smaken/chocolade.png" class="img-ice">
                             </button>
-                            <button id="foto-bestel" onclick="zetIn('citroen')" class="bestel-button" type="submit" name="citroen"><p>Citroen</p> 
+                            <button id="foto-bestel" class="bestel-button" type="submit" name="citroen"><p>Citroen</p> 
                                 <img id="bestel-image" src="../Website-Roset/images/smaken/citroen.png" class="img-ice">
                             </button>
-                            <button id="foto-bestel" onclick="zetIn('kers')" class="bestel-button" type="submit" name="kers"><p>Kers</p> 
+                            <button id="foto-bestel" class="bestel-button" type="submit" name="kers"><p>Kers</p> 
                                 <img id="bestel-image" src="../Website-Roset/images/smaken/kers.png" class="img-ice">
                             </button>
-                            <button id="foto-bestel" onclick="zetIn('griekseYoghurt')" class="bestel-button" type="submit" name="griekseYoghurt"><p>Yoghurt</p> 
+                            <button id="foto-bestel" class="bestel-button" type="submit" name="griekseYoghurt"><p>Yoghurt</p> 
                                 <img id="bestel-image" src="../Website-Roset/images/smaken/yoghurt.png" class="img-ice">
                             </button>
                         </div> 
                         <div class="rij3">
                             
-                            <button id="foto-bestel" onclick="zetIn('oreo')" class="bestel-button" type="submit" name="oreo"><p>Oreo</p> 
+                            <button id="foto-bestel" class="bestel-button" type="submit" name="oreo"><p>Oreo</p> 
                                 <img id="bestel-image" src="../Website-Roset/images/smaken/oreo.png" class="img-ice">
                             </button>
-                            <button id="foto-bestel" onclick="zetIn('mango')" class="bestel-button" type="submit" name="mango"><p>Mango</p> 
+                            <button id="foto-bestel" class="bestel-button" type="submit" name="mango"><p>Mango</p> 
                                 <img id="bestel-image" src="../Website-Roset/images/smaken/mango.png" class="img-ice">
                             </button>
-                            <button id="foto-bestel" onclick="zetIn('marsepein')" class="bestel-button" type="submit" name="marsepein"><p>Marsepein</p> 
+                            <button id="foto-bestel" class="bestel-button" type="submit" name="marsepein"><p>Marsepein</p> 
                                 <img id="bestel-image" src="../Website-Roset/images/smaken/marsepein.png" class="img-ice">
                             </button>       
-                            <button id="foto-bestel" onclick="zetIn('snicker')" class="bestel-button" type="submit" name="snicker"><p>Snicker</p> 
+                            <button id="foto-bestel" class="bestel-button" type="submit" name="snicker"><p>Snicker</p> 
                                 <img id="bestel-image" src="../Website-Roset/images/smaken/snicker.png" class="img-ice">
                             </button>    
-                            <button id="foto-bestel" onclick="zetIn('m&m')" class="bestel-button" type="submit" name="marsepein"><p>M&M</p> 
+                            <button id="foto-bestel" class="bestel-button" type="submit" name="marsepein"><p>M&M</p> 
                                 <img id="bestel-image" src="../Website-Roset/images/smaken/m&m.png" class="img-ice">
                             </button>    
-                            <button id="foto-bestel" onclick="zetIn('cookiedough')" class="bestel-button" type="submit" name="cookiedough"><p>Cookie Dough</p> 
+                            <button id="foto-bestel" class="bestel-button" type="submit" name="cookiedough"><p>Cookie Dough</p> 
                                 <img id="bestel-image" src="../Website-Roset/images/smaken/cookiedough.png" class="img-ice">
                             </button>                             
                         </div>     

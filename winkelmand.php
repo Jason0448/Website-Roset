@@ -30,20 +30,20 @@
                     <h3>Smaak van de week</h3> 
                     <img id="bestel-image" src="../Website-Roset/images/smaken/yoghurt.png" alt="Smaak van de week" class="img-a">
                     <p>De smaak van de week is Griekse Yoghurt</p>
-                    <button id="foto-bestel" onclick="zetIn('griekseYoghurt')" class="bestel-button" type="submit">Bestel Nu!!!</button>           
+                    <button id="foto-bestel" class="bestel-button" type="submit">Bestel Nu!!!</button>           
                 </div>
                 <div class="content-b" style="display: block;">
-                <button id="buttondelete">Verwijder alles</button>
                 <p id="items"></p>
                 <form action="order-process.php" method="post">
                 <input type="hidden" id="iceId" name="productid" value="">
-                    <h1>Jouw Winkelmand</h1>
+                    <h1>Bestellen</h1>
+                    <h2>Jouw bestelling : ....</h2>
                     <p style="font-size: 20px;">
                      Kies of je het ijs wil laten bezorgen of zelf af wilt halen.  
                      <input type="radio" id="bezorgen" name="fav_language" value="bezorgen">
-                     <label for="bezorgen">Bezorgen</label>
+                     <label for="bezorgen">Laten Bezorgen(Tegen extra kosten)</label>
                      <input type="radio" id="afhalen" name="fav_language" value="afhalen">
-                     <label for="afhalen">Afhalen</label><br>
+                     <label for="afhalen">Afhalen(Gratis)</label><br>
                     </p>
 
                     <label style="font-weight: 600;" for="fname">Voornaam :</label>
@@ -53,12 +53,12 @@
                     <label style="font-weight: 600;" for="zipcode">Postcode :</label>
                     <input type="text" id="zipcode" name="city"> <br>
                     <label style="font-weight: 600;" for="zipcode">Plaats :</label>
+
                     <select name="city" id="city">
                         <option value="Heiloo">Heiloo</option>
                         <option value="Limmen">Limmen</option>
                         <option value="Akersloot">Akersloot</option>
                     </select>
-                    
                 </form>         
                
                 </div>
