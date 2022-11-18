@@ -1,5 +1,4 @@
 <?php
-require 'db.php';
 
 session_start();
 
@@ -7,6 +6,23 @@ if(empty($_SESSION['userData']) || ($_SESSION['userData']['role'] == "klant")){
 
     header("Location: index.html");
  }
+
+require 'db.php';
+
+$id = $_GET["id"];
+
+$sql = "SELECT * FROM orders WHERE id = $id LIMIT 1";
+
+if ($result = mysqli_query($conn, $sql)) {
+
+    $order = mysqli_fetch_assoc($result);
+
+    if (is_null($order)) {
+        header("location: order-overview.php");
+    }
+    
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -28,27 +44,25 @@ if(empty($_SESSION['userData']) || ($_SESSION['userData']['role'] == "klant")){
                 </div>
                  <div class="header">
                     <ul class="menu-lijst">
-                        <li><a href="dashboard.php">Home</a></li>
+                    <li><a href="dashboard.php">Home</a></li>
                         <li><a href="user-overview.php">Gebruikers</a></li>
                         <li><a href="product-overview.php">Producten</a></li>
                         <li><a href="order-overview.php">Bestellingen</a></li>
-                        <li><a href="account.php">Account</a></li>
                         <li><a href="index.html">Terug naar Normaal</a></li>
                       </ul>
                 </div> 
                 <div class="main-content">
-                    <h1 style="text-align: center;">Product toevoegen</h1>
+                    <h1 style="text-align: center;">Status van Bestelling aanpassen</h1>
                     
-                        <form action="product-add-process.php" method="post">
+                        <form action="order-edit-process.php" method="post">
+                        <input type="hidden" name="id" value="<?php echo $order["id"] ?>">
                             <h2>
-                                <label for="name">Naam van het product</label>
-                                <input type="text" id="name" name="name" placeholder="Voer de naam in"> <br>
-                                <label for="name">Prijs per kilo</label>
-                                <input type="text" id="price_per_kg" name="price_per_kg" placeholder="Voer de prijs in"> <br>
-                                <label for="name">Categorie</label>
-                                <input type="text" id="category" name="category" placeholder="Voer de categorie in">
+                                <p>orderID : <?php echo $order["id"] ?></p> 
+                                <label for="name">Status</label>
+                                <input type="text" class="form-control" name="status" value="<?php echo $order["status"] ?>"><br>
                             </h2>
-                            <button type="submit" class="button">Voeg toe</button>
+                            <br>
+                            <button type="submit" class="button" name="submit">Bewerk Status</button>
                         </form>
                     </div>       
                 </div>         

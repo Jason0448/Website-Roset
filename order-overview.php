@@ -4,13 +4,13 @@ require 'db.php';
 
 session_start();
 
-if($_SESSION['userData'] == 0 || $_SESSION['userData']['role'] == "klant"){
+if(empty($_SESSION['userData']) || ($_SESSION['userData']['role'] == "klant")){
 
-    header("Location : index.html");
-}
+    header("Location: index.html");
+ }
 
 
-$sql = "SELECT *, users.firstname, products.name FROM users 
+$sql = "SELECT *, users.firstname, products.name, orders.id AS order_id FROM users 
 JOIN orders on orders.user_id = users.id
 JOIN products on products.id = orders.product_id; ";
 
@@ -59,13 +59,14 @@ if ($result = mysqli_query($conn, $sql)) {
                             </thead>
                             <tbody>
                                 <?php foreach ($orders as $order) : ?>
-                                    <tr>
-                                        <td><?php echo $order["id"] ?></td>
+                                    <tr style="text-align: center;">
+                                        <td><?php echo $order["order_id"] ?></td>
                                         <td><?php echo $order["firstname"] ?></td>
                                         <td><?php echo $order["name"] ?></td>
                                         <td><?php echo $order["pickup"] ?></td>
                                         <td><?php echo $order["status"] ?></td>
-                                        <td><a style="color: red;" href="order-delete.php?id=<?php echo $order["id"] ?>" class="btn btn-danger">Annuleer/Verwijder</a></td>
+                                        <td><a href="order-edit.php?id=<?php echo $order["order_id"] ?>" class="btn btn-danger">Verander Status</a></td>
+                                        <td><a style="color:red;" href="order-delete.php?id=<?php echo $order["order_id"] ?>" class="btn btn-danger">Annuleer</a></td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>

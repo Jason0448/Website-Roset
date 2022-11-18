@@ -10,10 +10,10 @@ if ($result = mysqli_query($conn, $sql)) {
 
 session_start();
 
-if($_SESSION['userData'] == 0 || $_SESSION['userData']['role'] == "klant"){
+if(empty($_SESSION['userData']) || ($_SESSION['userData']['role'] == "klant")){
 
-    header("Location : index.html");
-}
+    header("Location: index.html");
+ }
 
 ?>
 
@@ -56,7 +56,7 @@ if($_SESSION['userData'] == 0 || $_SESSION['userData']['role'] == "klant"){
                             </thead>
                             <tbody>
                                 <?php foreach ($users as $user) : ?>
-                                    <tr>
+                                    <tr style="text-align: center;">
                                         <td><?php echo $user["id"] ?></td>
                                         <td><?php echo $user["firstname"] ?></td>
                                         <td><?php echo $user["lastname"] ?></td>

@@ -3,11 +3,10 @@ require 'db.php';
 
 session_start();
 
-if($_SESSION['userData'] == 0 || $_SESSION['userData']['role'] == "klant"){
+if(empty($_SESSION['userData']) || ($_SESSION['userData']['role'] == "klant")){
 
-    header("Location : index.html");
+   header("Location: index.html");
 }
-
 
 ?>
 <!DOCTYPE html>

@@ -10,10 +10,10 @@ if ($result = mysqli_query($conn, $sql)) {
 
 session_start();
 
-if($_SESSION['userData'] == 0 || $_SESSION['userData']['role'] == "klant"){
+if(empty($_SESSION['userData']) || ($_SESSION['userData']['role'] == "klant")){
 
-    header("Location : index.html");
-}
+    header("Location: index.html");
+ }
 
 ?>
 
@@ -59,7 +59,7 @@ if($_SESSION['userData'] == 0 || $_SESSION['userData']['role'] == "klant"){
                             </thead>
                             <tbody>
                                 <?php foreach ($products as $product) : ?>
-                                    <tr>
+                                    <tr style="text-align: center;">
                                         <td><?php echo $product["id"] ?></td>
                                         <td><?php echo $product["name"] ?></td>
                                         <td><?php echo $product["price_per_kg"] ?></td>
