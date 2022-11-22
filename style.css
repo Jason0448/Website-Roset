@@ -214,6 +214,9 @@ body{
 /* styling */
 .bestel-button{
     background-color: pink;
+    border-radius: 35px;
+    border-color: pink;
+    margin: 3px;
 }
 .img-ice{
     height: 120px;

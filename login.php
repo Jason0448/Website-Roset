@@ -22,10 +22,10 @@ session_start();
                 <div class="header">
                     <ul class="menu-lijst">
                         <li><a href="index.html">Over ons</a></li>
-                        <li><a href="bestellen.php">Bestellen</a></li>
+                        <li><a href="order.php">Bestellen</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="winkelmand.php">Winkelmandje</a></li>
+                        <li><a href="winkelwagen.php">Winkelmandje</a></li>
                         <li><a href="account.php">Account</a></li>
                       </ul>
                 </div>

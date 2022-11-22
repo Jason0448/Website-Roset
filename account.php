@@ -42,7 +42,7 @@ if ($result = mysqli_query($conn, $sql)) {
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact</a></li>
                         <li><a href="account.php">Account</a></li>
-                        <li><a href="winkelmand.php"><i style='font-size:24px' class='fas'>&#xf07a;</i></a></li>
+                        <li><a href="winkelwagen.php"><i style='font-size:24px' class='fas'>&#xf07a;</i></a></li>
                       </ul>
                 </div> 
                 <div class="content-a">
