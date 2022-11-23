@@ -1,13 +1,17 @@
 <?php
 
-
+session_start();
 
 if (isset($_POST["submit"])) {
 
-    $pickup = $_POST['pickup'];
-    $name = $_POST['firstname'];
-    // $address= $_POST[]
+    $user = $_SESSION['user_id'];
+    $name = $_POST['fullname'];
     $prods = $_POST['productid'];
+    $city = $_POST['city'];
+    $address = $_POST['address'];
+    $method = $_POST['method'];
+    //$pickup = $_POST['pickup'];
+
     require "db.php";
 
     //maakt van een string een array
@@ -15,8 +19,8 @@ if (isset($_POST["submit"])) {
 
     foreach ($product as $prod) :
 
-        $sql = "INSERT INTO orders (product_id, name)
-        VALUES ('$prod', '$name')";
+        $sql = "INSERT INTO orders (user_id, product_id, name, city, address, method)
+        VALUES ('$user','$prod', '$name', '$city', '$address', '$method')";
 
         // Voer de INSERT INTO STATEMENT uit/ execute de query in het database
         mysqli_query($conn, $sql);
@@ -27,22 +31,7 @@ if (isset($_POST["submit"])) {
 
 
     unset($_SESSION['winkelwagen']); // To delete a session var
-    echo "Inserted successfully";
     mysqli_close($conn); // Sluit de database verbinding want er hoeven geen queries meer uitgevoerd te worden
+
     header("Location: index.html");
-
-
-
-
-
-    // $sql = "INSERT INTO orders ()
-    // VALUES ()";
-
-    // if (mysqli_query($conn, $sql) === TRUE) {
-    //     header("Location: index.html");
-    //     echo "Je bestelling is ontvangen en word verwerkt!";
-    // } else {
-    //     echo "Error: " . $sql . "<br>" . $conn->error;
-    // }
-    // mysqli_close($conn);
 }

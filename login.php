@@ -11,6 +11,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <title>Home</title>
 </head>
     <body style="background-color: beige;">
@@ -21,12 +22,12 @@ session_start();
                 </div>
                 <div class="header">
                     <ul class="menu-lijst">
-                        <li><a href="index.html">Over ons</a></li>
+                        <li><a href="#">Over ons</a></li>
                         <li><a href="order.php">Bestellen</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="winkelwagen.php">Winkelmandje</a></li>
                         <li><a href="account.php">Account</a></li>
+                        <li><a href="winkelwagen.php"><i style='font-size:24px' class='fas'>&#xf07a;</i></a></li>
                       </ul>
                 </div>
                 <div class="content-a">

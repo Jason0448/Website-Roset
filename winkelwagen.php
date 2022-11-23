@@ -3,8 +3,8 @@
 
     session_start();
 
-
     print_r($_SESSION['winkelwagen']);
+
     //veranderd elk item in de array naar een string
     $whereIn = implode(',', $_SESSION['winkelwagen']);
     // die($whereIn);
@@ -15,14 +15,12 @@
         $products = mysqli_fetch_all($result, MYSQLI_ASSOC);
     }
 
+    if(empty($_SESSION['userData'])){
 
-    // if (isset($_SESSION['user_id'])) {
-    //     echo 'loggedi n';
-    // } else {
-    //     echo 'je bent niet ingelogt';
-    //     die();
-    // }
-    ?>
+        header("Location: login.php");
+     }
+
+?>
 
 
  <!DOCTYPE html>
@@ -52,7 +50,7 @@
                  <li><a href="blog.html">Blog</a></li>
                  <li><a href="contact.html">Contact</a></li>
                  <li><a href="account.php">Account</a></li>
-                 <li><a href="winkelmand.php"><i style='font-size:24px' class='fas'>&#xf07a;</i></a></li>
+                 <li><a href="winkelwagen.php"><i style='font-size:24px' class='fas'>&#xf07a;</i></a></li>
              </ul>
          </div>
          <div class="content-a">
@@ -64,43 +62,41 @@
          <div class="content-b" style="display: block;">
              <p id="items"></p>
              <a href="leeg-winkelwagen.php">Delete</a>
-
+            <p style="text-align: left;">UserID : <?php echo $_SESSION['user_id']?></p>
              <form action="winkelwagen-process.php" method="post" name="submit">
                  <h1>Bestellen</h1>
-                 <h2>Jouw bestelling : </h2>
+                 <h2 style="text-align: left;">Jouw bestelling : </h2>
                  <?php foreach ($products as $product) : ?>
-                     <p><?php echo $product['name'] ?> </p>
-
+                     <p style="text-align: left;"><?php echo $product['name'] ?> </p>
 
                  <?php endforeach; ?>
 
                  <input type="hidden" id="winkelmandids" name="productid" value="<?php echo $whereIn ?> ">
-
-                 <p style="font-size: 20px;">
+                 <input type="hidden" id="userids" name="userid" value="<?php echo $_SESSION['user_id'] ?> ">
+                 <p style="text-align: left;">
                      Kies of je het ijs wil laten bezorgen of zelf af wilt halen.
-                     <input type="radio" id="bezorgen" name="rb" value="bezorgen">
-                      <label for="bezorgen">Laten Bezorgen(Tegen extra kosten)</label>
-                      <input type="radio" id="afhalen" name="rb" value="afhalen">
-                      <label for="afhalen">Afhalen(Gratis)</label><br>
+                     <select name="method" id="method">
+                     <option value="LatenBezorgen">Laten bezorgen (Tegen extra kosten)</option>
+                     <option value="Afhalen">Zelf Afhalen (Gratis)</option>
+                 </select><br>
                  </p>
 
-                 <label style="font-weight: 600;" for="fname">Voornaam :</label>
-                 <input type="text" id="fname" name="firstname"> <br>
-                 <!-- <label style="font-weight: 600;" for="address">Adres :</label>
-                 <input type="text" id="address" name="address"><br>
+                 <label style="font-weight: 600;" for="fname">Volledige Naam :</label>
+                 <input type="text" id="fullname" name="fullname"><br>
+                 <!--
                  <label style="font-weight: 600;" for="zipcode">Postcode :</label>
-
-                 <input type="text" id="zipcode" name="city"> <br>
+                 !-->
                  <label style="font-weight: 600;" for="zipcode">Plaats :</label>
-
                  <select name="city" id="city">
                      <option value="Heiloo">Heiloo</option>
                      <option value="Limmen">Limmen</option>
                      <option value="Akersloot">Akersloot</option>
                  </select><br>
 
-                 <label style="font-weight: 600;" for="pickup">Bezorg of Afhaaltijd : </label>
-                 <input type="time" id="zipcode" name="pickup"> <br> -->
+                 <label style="font-weight: 600;" for="address">Adres :</label>
+                 <input type="text" id="address" name="address"><br>
+                 <!-- <label style="font-weight: 600;" for="pickup">Bezorg of Afhaaltijd : </label>
+                 <input type="time" id="zipcode" name="pickup"> <br>  -->
                  <input type="submit" name="submit" value="Plaats bestelling" style="background-color: rgb(6, 153, 221); color:black;">
              </form>
          </div>

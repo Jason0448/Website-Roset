@@ -10,7 +10,7 @@ if(empty($_SESSION['userData']) || ($_SESSION['userData']['role'] == "klant")){
  }
 
 
-$sql = "SELECT *, users.firstname, products.name, orders.id AS order_id FROM users 
+$sql = "SELECT *, orders.name, products.name, orders.id AS order_id FROM users 
 JOIN orders on orders.user_id = users.id
 JOIN products on products.id = orders.product_id; ";
 
